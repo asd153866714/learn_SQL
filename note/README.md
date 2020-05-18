@@ -1,4 +1,4 @@
-```
+```SQL
 CREATE DATABASE 學校
 ON PRIMARY   
 ( NAME='學校',
