@@ -20,6 +20,8 @@ LOG ON
 
 # 建立多檔案群組的資料庫
 
+內含2個檔案群組、3 個資料檔和1個交易記錄檔，如下所示：
+
 ```SQL
 
 CREATE DATABASE 代理產品 
@@ -47,3 +49,18 @@ LOG ON
   MAXSIZE=10MB,
   FILEGROWTH=10% )
 ```
+
+# 修改資料庫
+
+* 在【產品】資料庫的【產品_群組】檔案群組，新 增名為【產品_群組_13】的資料檔，如下所示： 
+
+```
+ALTER DATABASE 產品 ADD FILE 
+  (  NAME = '產品_群組_13',    
+  FILENAME = 'C:\Data\產品_群組_13.ndf', 
+  SIZE = 2MB,   
+  MAXSIZE=10MB,    
+  FILEGROWTH=1MB ) TO FILEGROUP 產品_群組 
+```
+
+* 
