@@ -1,3 +1,4 @@
+請指定資料檔和交易記錄檔的規格清單來建立名為【學校】 的資料庫，檔案是位在「C:\Data」路徑，如下所示： 
 ```SQL
 CREATE DATABASE 學校
 ON PRIMARY   
