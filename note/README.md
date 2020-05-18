@@ -2,7 +2,7 @@
 
 請指定資料檔和交易記錄檔的規格清單來建立名為【學校】 的資料庫，檔案是位在「C:\Data」路徑，如下所示： 
 
-```SQL
+```
 CREATE DATABASE 學校
 ON PRIMARY   
 ( NAME='學校',
@@ -22,7 +22,7 @@ LOG ON
 
 內含2個檔案群組、3 個資料檔和1個交易記錄檔，如下所示：
 
-```SQL
+```
 
 CREATE DATABASE 代理產品 
 ON PRIMARY   
@@ -92,8 +92,6 @@ MODIFY FILEGROUP 代理產品_群組
 
 # 刪除使用者資料庫
 
- * 刪除用 DROP :
+刪除用 DROP :
 
 `DROP DATABASE 資料庫名稱清單 `
-
-# 
