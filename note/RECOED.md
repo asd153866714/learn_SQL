@@ -28,6 +28,9 @@ INSERT INTO 課程 (課程編號, 名稱, 學分)
 VALUES ('CS410','平行程式設計',2) 
 ```
 
+
+### 記錄建構子（Row Constructors）
+
 * 記錄建構子（Row Constructors）可以在同一個 INSERT指令的VALUES子句插入多筆記錄
 
 在【員工】資料表使用記錄建構子來同時新增2筆 員工記錄，如下所示： 
