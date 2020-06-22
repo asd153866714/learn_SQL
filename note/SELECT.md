@@ -68,8 +68,8 @@ FROM 書籍
 
 ```
 SELECT	企劃書籍.編號, 名稱, 價錢
-FROM	  企劃書籍 JOIN 企劃書籍預定價
-		    ON 企劃書籍.編號 = 企劃書籍預定價.編號
+FROM	企劃書籍 JOIN 企劃書籍預定價
+	ON 企劃書籍.編號 = 企劃書籍預定價.編號
 ```
 
 ## INNER JOIN
@@ -85,35 +85,35 @@ FROM	旗旗公司 AS 旗 JOIN 標標公司 AS 標
 找出兩家公司共同的產品及價格, 以及旗旗公司的獨家產品：
 ```
 SELECT	旗.產品名稱 AS 旗旗公司產品名稱, 旗.價格, 
-		    標.產品名稱 AS 標標公司產品名稱, 標.價格
-FROM	  旗旗公司 AS 旗 LEFT JOIN 標標公司 AS 標
-		    ON	旗.產品名稱 = 標.產品名稱
+	標.產品名稱 AS 標標公司產品名稱, 標.價格
+FROM	旗旗公司 AS 旗 LEFT JOIN 標標公司 AS 標
+	ON 旗.產品名稱 = 標.產品名稱
 ```
 
 ## RIGHT JOIN
 查詢兩家公司共同的產品和價格, 以及標標公司有什麼獨家產品：
 ```
 SELECT	旗.產品名稱 AS 旗旗公司產品名稱, 旗.價格, 
-		    標.產品名稱 AS 標標公司產品名稱, 標.價格
-FROM	  旗旗公司 AS 旗 RIGHT JOIN 標標公司 AS 標
-		    ON	旗.產品名稱 = 標.產品名稱
+	標.產品名稱 AS 標標公司產品名稱, 標.價格
+FROM	旗旗公司 AS 旗 RIGHT JOIN 標標公司 AS 標
+	ON 旗.產品名稱 = 標.產品名稱
 ```
 
 ## FULL JOIN
 查詢兩家公司所有的產品和價格：
 ```
 SELECT	旗.產品名稱 AS 旗旗公司產品名稱, 旗.價格, 
-		    標.產品名稱 AS 標標公司產品名稱, 標.價格
-FROM	  旗旗公司 AS 旗 FULL JOIN 標標公司 AS 標
-		    ON	旗.產品名稱 = 標.產品名稱
+	標.產品名稱 AS 標標公司產品名稱, 標.價格
+FROM	旗旗公司 AS 旗 FULL JOIN 標標公司 AS 標
+	ON 旗.產品名稱 = 標.產品名稱
 ```
 
 ## CROSS JOIN
  將兩家公司的每項產品一一比對：
 ```
 SELECT  旗.產品名稱 AS 旗旗公司產品名稱, 旗.價格, 
-		    標.產品名稱 AS 標標公司產品名稱, 標.價格
-FROM	  旗旗公司 AS 旗 CROSS JOIN 標標公司 AS 標
+	標.產品名稱 AS 標標公司產品名稱, 標.價格
+FROM	旗旗公司 AS 旗 CROSS JOIN 標標公司 AS 標
 ```
 
 ## Self-Joins
@@ -123,8 +123,8 @@ FROM	  旗旗公司 AS 旗 CROSS JOIN 標標公司 AS 標
 ```
 SELECT  員工.姓名, 員工.職位,
         長官.姓名 AS 主管
-FROM	  員工 LEFT JOIN 員工 AS 長官
-		    ON 員工.主管編號 = 長官.編號
+FROM	員工 LEFT JOIN 員工 AS 長官
+	ON 員工.主管編號 = 長官.編號
 ```
 
 # WHERE 子句
