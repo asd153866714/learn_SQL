@@ -173,11 +173,18 @@ GROUP BY ROLLUP	(客戶名稱, 書名)
 
 從出貨記錄資料表中查詢, 哪一本書進 書總量超過 6 本, 以及是哪家書店進的：
 ```
-
+SELECT	客戶名稱, 書名, SUM(數量) AS 總數量
+FROM	出貨記錄
+ORDER BY 客戶名稱, 書名
+HAVING SUM(數量) >= 6
 ```
 <br>
 用 HAVING 條件來選出 COUNT 大於 1 的記錄： 
 ```
+SELECT	客戶名稱, 書名, SUM(數量) AS 總數量
+FROM	出貨記錄
+ORDER BY 客戶名稱, 書名
+HAVING COUNT(*) > 1
 ```
 
 # ORDER BY 子句 
